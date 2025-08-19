@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Oluwatunmise Awomoyi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-blue': '#0A192F',
+                        'orange': '#FF6B35',
+                        'light-gray': '#F5F5F5'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .text-gradient {
+            background: linear-gradient(135deg, #FF6B35, #ff8c5a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        .project-overlay {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.9), rgba(255, 140, 90, 0.9));
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .filter-btn.active {
+            background: #FF6B35;
+            color: white;
+        }
+        .project-hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-deep-blue text-white font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-deep-blue/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-xl font-bold text-gradient">
+                    <a href="index.html">Tunmise</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-white hover:text-orange transition duration-300">Home</a>
+                    <a href="about.html" class="text-white hover:text-orange transition duration-300">About</a>
+                    <a href="skills.html" class="text-white hover:text-orange transition duration-300">Skills</a>
+                    <a href="portfolio.html" class="text-orange hover:text-white transition duration-300">Portfolio</a>
+                    <a href="contact.html" class="text-white hover:text-orange transition duration-300">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-orange">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-deep-blue/95 border-t border-gray-800">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-white hover:text-orange transition duration-300">Home</a>
+                <a href="about.html" class="block py-2 text-white hover:text-orange transition duration-300">About</a>
+                <a href="skills.html" class="block py-2 text-white hover:text-orange transition duration-300">Skills</a>
+                <a href="portfolio.html" class="block py-2 text-orange">Portfolio</a>
+                <a href="contact.html" class="block py-2 text-white hover:text-orange transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-deep-blue to-deep-blue/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-up">
+                    My <span class="text-gradient">Portfolio</span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in-up">
+                    A showcase of projects that demonstrate my passion for creating exceptional digital experiences
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="py-8 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="filter-btn active glass px-6 py-2 rounded-full transition duration-300" data-filter="all">
+                    All Projects
+                </button>
+                <button class="filter-btn glass px-6 py-2 rounded-full hover:bg-white/10 transition duration-300" data-filter="web">
+                    Web Apps
+                </button>
+                <button class="filter-btn glass px-6 py-2 rounded-full hover:bg-white/10 transition duration-300" data-filter="ecommerce">
+                    E-commerce
+                </button>
+                <button class="filter-btn glass px-6 py-2 rounded-full hover:bg-white/10 transition duration-300" data-filter="ui">
+                    UI/UX Design
+                </button>
+                <button class="filter-btn glass px-6 py-2 rounded-full hover:bg-white/10 transition duration-300" data-filter="mobile">
+                    Mobile First
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                
+                <!-- Project 1: E-commerce Platform -->
+                <div class="project-card glass rounded-xl overflow-hidden" data-category="web ecommerce">
+                    <div class="relative group">
+                        <div class="aspect-video bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-shopping-cart text-4xl text-gray-400 mb-2"></i>
+                                <p class="text-gray-400 text-sm">E-commerce Platform</p>
+                            </div>
+                        </div>
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="flex space-x-4 mb-4">
+                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+                                        <i class="fab fa-github"></i>
+                                    </button>
+                                </div>
+                                <p class="text-white font-medium">View Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">ShopFlow E-commerce</h3>
+                        <p class="text-gray-300 mb-4">Modern e-commerce platform with real-time inventory, secure payments, and admin dashboard.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">MongoDB</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Stripe</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-400 text-sm">2024</span>
+                            <div class="flex space-x-2">
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Task Management App -->
+                <div class="project-card glass rounded-xl overflow-hidden" data-category="web ui">
+                    <div class="relative group">
+                        <div class="aspect-video bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-tasks text-4xl text-blue-300 mb-2"></i>
+                                <p class="text-blue-300 text-sm">Task Manager</p>
+                            </div>
+                        </div>
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="flex space-x-4 mb-4">
+                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+                                        <i class="fab fa-github"></i>
+                                    </button>
+                                </div>
+                                <p class="text-white font-medium">View Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">TaskFlow Pro</h3>
+                        <p class="text-gray-300 mb-4">Intuitive task management application with team collaboration, deadlines, and progress tracking.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Vue.js</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Express</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Socket.io</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-400 text-sm">2024</span>
+                            <div class="flex space-x-2">
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-gray-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Restaurant Website -->
+                <div class="project-card glass rounded-xl overflow-hidden" data-category="web mobile">
+                    <div class="relative group">
+                        <div class="aspect-video bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-utensils text-4xl text-green-300 mb-2"></i>
+                                <p class="text-green-300 text-sm">Restaurant Site</p>
+                            </div>
+                        </div>
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="flex space-x-4 mb-4">
+                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+                                        <i class="fab fa-github"></i>
+                                    </button>
+                                </div>
+                                <p class="text-white font-medium">View Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Savory Delights</h3>
+                        <p class="text-gray-300 mb-4">Elegant restaurant website with online reservations, menu showcase, and mobile-first design.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">HTML5</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Tailwind</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">PHP</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-400 text-sm">2024</span>
+                            <div class="flex space-x-2">
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Crypto Dashboard -->
+                <div class="project-card glass rounded-xl overflow-hidden" data-category="web ui">
+                    <div class="relative group">
+                        <div class="aspect-video bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fab fa-bitcoin text-4xl text-purple-300 mb-2"></i>
+                                <p class="text-purple-300 text-sm">Crypto Dashboard</p>
+                            </div>
+                        </div>
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="flex space-x-4 mb-4">
+                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+                                        <i class="fab fa-github"></i>
+                                    </button>
+                                </div>
+                                <p class="text-white font-medium">View Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">CryptoTracker Pro</h3>
+                        <p class="text-gray-300 mb-4">Real-time cryptocurrency tracking dashboard with portfolio management and price alerts.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Chart.js</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">API</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Firebase</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-400 text-sm">2023</span>
+                            <div class="flex space-x-2">
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-gray-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Fitness App Landing -->
+                <div class="project-card glass rounded-xl overflow-hidden" data-category="web mobile">
+                    <div class="relative group">
+                        <div class="aspect-video bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-dumbbell text-4xl text-red-300 mb-2"></i>
+                                <p class="text-red-300 text-sm">Fitness App</p>
+                            </div>
+                        </div>
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="flex space-x-4 mb-4">
+                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+                                        <i class="fab fa-github"></i>
+                                    </button>
+                                </div>
+                                <p class="text-white font-medium">View Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">FitLife Landing</h3>
+                        <p class="text-gray-300 mb-4">High-converting landing page for a fitness app with animated sections and mobile optimization.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Next.js</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Framer Motion</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Tailwind</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Vercel</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-400 text-sm">2023</span>
+                            <div class="flex space-x-2">
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Portfolio Website -->
+                <div class="project-card glass rounded-xl overflow-hidden" data-category="web ui">
+                    <div class="relative group">
+                        <div class="aspect-video bg-gradient-to-br from-indigo-600 to-indigo-800 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-briefcase text-4xl text-indigo-300 mb-2"></i>
+                                <p class="text-indigo-300 text-sm">Portfolio Site</p>
+                            </div>
+                        </div>
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="flex space-x-4 mb-4">
+                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+                                        <i class="fab fa-github"></i>
+                                    </button>
+                                </div>
+                                <p class="text-white font-medium">View Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Designer Portfolio</h3>
+                        <p class="text-gray-300 mb-4">Clean, minimalist portfolio website for a UI/UX designer with smooth animations and case studies.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Vue.js</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">GSAP</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">CSS Grid</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Netlify</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-400 text-sm">2023</span>
+                            <div class="flex space-x-2">
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-gray-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: E-learning Platform -->
+                <div class="project-card glass rounded-xl overflow-hidden" data-category="web ecommerce">
+                    <div class="relative group">
+                        <div class="aspect-video bg-gradient-to-br from-yellow-600 to-yellow-800 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-graduation-cap text-4xl text-yellow-300 mb-2"></i>
+                                <p class="text-yellow-300 text-sm">E-learning</p>
+                            </div>
+                        </div>
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="flex space-x-4 mb-4">
+                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+                                        <i class="fab fa-github"></i>
+                                    </button>
+                                </div>
+                                <p class="text-white font-medium">View Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">LearnHub Academy</h3>
+                        <p class="text-gray-300 mb-4">Comprehensive e-learning platform with video courses, quizzes, and progress tracking system.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">MongoDB</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">AWS S3</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-400 text-sm">2023</span>
+                            <div class="flex space-x-2">
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Weather App -->
+                <div class="project-card glass rounded-xl overflow-hidden" data-category="web mobile">
+                    <div class="relative group">
+                        <div class="aspect-video bg-gradient-to-br from-cyan-600 to-cyan-800 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-cloud-sun text-4xl text-cyan-300 mb-2"></i>
+                                <p class="text-cyan-300 text-sm">Weather App</p>
+                            </div>
+                        </div>
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="flex space-x-4 mb-4">
+                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+                                        <i class="fab fa-github"></i>
+                                    </button>
+                                </div>
+                                <p class="text-white font-medium">View Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">WeatherWise</h3>
+                        <p class="text-gray-300 mb-4">Beautiful weather application with location-based forecasts, interactive maps, and PWA features.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Weather API</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">PWA</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">CSS3</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-400 text-sm">2023</span>
+                            <div class="flex space-x-2">
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-orange"></i>
+                                <i class="fas fa-star text-gray-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button class="bg-orange hover:bg-orange/80 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 transform hover:scale-105">
+                    Load More Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-20 bg-deep-blue/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Project <span class="text-gradient">Impact</span>
+                </h2>
+                <p class="text-xl text-gray-300">
+                    Numbers that reflect the success of our collaborations
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center glass p-6 rounded-xl">
+                    <div class="text-3xl font-bold text-orange mb-2">50+</div>
+                    <div class="text-gray-300">Projects Completed</div>
+                </div>
+                <div class="text-center glass p-6 rounded-xl">
+                    <div class="text-3xl font-bold text-orange mb-2">30+</div>
+                    <div class="text-gray-300">Happy Clients</div>
+                </div>
+                <div class="text-center glass p-6 rounded-xl">
+                    <div class="text-3xl font-bold text-orange mb-2">98%</div>
+                    <div class="text-gray-300">Satisfaction Rate</div>
+                </div>
+                <div class="text-center glass p-6 rounded-xl">
+                    <div class="text-3xl font-bold text-orange mb-2">24/7</div>
+                    <div class="text-gray-300">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-orange/10 to-orange/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                Ready to Start Your <span class="text-gradient">Project?</span>
+            </h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Let's collaborate to create something amazing together. From concept to launch, I'll be with you every step of the way.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-orange hover:bg-orange/80 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 transform hover:scale-105">
+                    Start Your Project
+                </a>
+                <a href="about.html" class="glass text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition duration-300">
+                    Learn More About Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-blue border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <p class="text-gray-300">© 2025 Oluwatunmise Awomoyi. All rights reserved.</p>
+                    <p class="text-gray-400 text-sm mt-1">Built with passion and attention to detail.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-orange transition duration-300">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-orange transition duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-orange transition duration-300">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-orange transition duration-300">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Portfolio filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filterValue === 'all') {
+                        card.classList.remove('project-hidden');
+                        card.style.display = 'block';
+                    } else {
+                        const cardCategories = card.getAttribute('data-category').split(' ');
+                        if (cardCategories.includes(filterValue)) {
+                            card.classList.remove('project-hidden');
+                            card.style.display = 'block';
+                        } else {
+                            card.classList.add('project-hidden');
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('animate-fade-in-up');
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        // Observe project cards
+        projectCards.forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
