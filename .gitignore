@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build files
+.DS_Store
+*.log
+npm-debug.log*
+
+# Editor files
+.vscode/
+.idea/
+
+# System files
+Thumbs.db

@@ -84,7 +84,6 @@
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="text-white hover:text-orange transition duration-300">Home</a>
                     <a href="about.html" class="text-white hover:text-orange transition duration-300">About</a>
-                    <a href="skills.html" class="text-white hover:text-orange transition duration-300">Skills</a>
                     <a href="portfolio.html" class="text-orange hover:text-white transition duration-300">Portfolio</a>
                     <a href="contact.html" class="text-white hover:text-orange transition duration-300">Contact</a>
                 </div>
@@ -100,7 +99,6 @@
             <div class="px-4 py-2 space-y-2">
                 <a href="index.html" class="block py-2 text-white hover:text-orange transition duration-300">Home</a>
                 <a href="about.html" class="block py-2 text-white hover:text-orange transition duration-300">About</a>
-                <a href="skills.html" class="block py-2 text-white hover:text-orange transition duration-300">Skills</a>
                 <a href="portfolio.html" class="block py-2 text-orange">Portfolio</a>
                 <a href="contact.html" class="block py-2 text-white hover:text-orange transition duration-300">Contact</a>
             </div>
@@ -121,29 +119,6 @@
         </div>
     </section>
 
-    <!-- Filter Buttons -->
-    <section class="py-8 border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap justify-center gap-4">
-                <button class="filter-btn active glass px-6 py-2 rounded-full transition duration-300" data-filter="all">
-                    All Projects
-                </button>
-                <button class="filter-btn glass px-6 py-2 rounded-full hover:bg-white/10 transition duration-300" data-filter="web">
-                    Web Apps
-                </button>
-                <button class="filter-btn glass px-6 py-2 rounded-full hover:bg-white/10 transition duration-300" data-filter="ecommerce">
-                    E-commerce
-                </button>
-                <button class="filter-btn glass px-6 py-2 rounded-full hover:bg-white/10 transition duration-300" data-filter="ui">
-                    UI/UX Design
-                </button>
-                <button class="filter-btn glass px-6 py-2 rounded-full hover:bg-white/10 transition duration-300" data-filter="mobile">
-                    Mobile First
-                </button>
-            </div>
-        </div>
-    </section>
-
     <!-- Projects Grid -->
     <section class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -152,11 +127,8 @@
                 <!-- Project 1: E-commerce Platform -->
                 <div class="project-card glass rounded-xl overflow-hidden" data-category="web ecommerce">
                     <div class="relative group">
-                        <div class="aspect-video bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center">
-                            <div class="text-center">
-                                <i class="fas fa-shopping-cart text-4xl text-gray-400 mb-2"></i>
-                                <p class="text-gray-400 text-sm">E-commerce Platform</p>
-                            </div>
+                        <div class="aspect-video overflow-hidden">
+                            <img src="images/techflow-saas.jpg" alt="ShopFlow E-commerce Project" class="w-full h-full object-cover">
                         </div>
                         <div class="project-overlay absolute inset-0 flex items-center justify-center">
                             <div class="text-center">
@@ -173,13 +145,13 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">ShopFlow E-commerce</h3>
-                        <p class="text-gray-300 mb-4">Modern e-commerce platform with real-time inventory, secure payments, and admin dashboard.</p>
+                        <h3 class="text-xl font-bold mb-2">TechFlow SaaS</h3>
+                        <p class="text-gray-300 mb-4">Modern SaaS platform with clean design, user dashboard, and subscription management features.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">React</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Node.js</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">MongoDB</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Stripe</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">HTML5</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">CSS3</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-400 text-sm">2024</span>
@@ -197,11 +169,8 @@
                 <!-- Project 2: Task Management App -->
                 <div class="project-card glass rounded-xl overflow-hidden" data-category="web ui">
                     <div class="relative group">
-                        <div class="aspect-video bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
-                            <div class="text-center">
-                                <i class="fas fa-tasks text-4xl text-blue-300 mb-2"></i>
-                                <p class="text-blue-300 text-sm">Task Manager</p>
-                            </div>
+                        <div class="aspect-video overflow-hidden">
+                            <img src="images/mashinc-realestate.jpg" alt="TaskFlow Pro Project" class="w-full h-full object-cover">
                         </div>
                         <div class="project-overlay absolute inset-0 flex items-center justify-center">
                             <div class="text-center">
@@ -218,13 +187,12 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">TaskFlow Pro</h3>
-                        <p class="text-gray-300 mb-4">Intuitive task management application with team collaboration, deadlines, and progress tracking.</p>
+                        <h3 class="text-xl font-bold mb-2">Mashinc Real Estate</h3>
+                        <p class="text-gray-300 mb-4">Professional real estate website with property listings, search functionality, and agent profiles.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Vue.js</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Express</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">PostgreSQL</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Socket.io</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">HTML5</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">CSS3</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">JavaScript</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-400 text-sm">2024</span>
@@ -242,11 +210,8 @@
                 <!-- Project 3: Restaurant Website -->
                 <div class="project-card glass rounded-xl overflow-hidden" data-category="web mobile">
                     <div class="relative group">
-                        <div class="aspect-video bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center">
-                            <div class="text-center">
-                                <i class="fas fa-utensils text-4xl text-green-300 mb-2"></i>
-                                <p class="text-green-300 text-sm">Restaurant Site</p>
-                            </div>
+                        <div class="aspect-video overflow-hidden">
+                            <img src="images/lumiere-resturant.jpg" alt="Savory Delights Restaurant Website" class="w-full h-full object-cover">
                         </div>
                         <div class="project-overlay absolute inset-0 flex items-center justify-center">
                             <div class="text-center">
@@ -263,13 +228,13 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Savory Delights</h3>
-                        <p class="text-gray-300 mb-4">Elegant restaurant website with online reservations, menu showcase, and mobile-first design.</p>
+                        <h3 class="text-xl font-bold mb-2">Lumiere Restaurant</h3>
+                        <p class="text-gray-300 mb-4">Elegant restaurant website with sophisticated design, menu showcase, and online reservation system.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">HTML5</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Tailwind</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
                             <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">JavaScript</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">PHP</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">CSS3</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-400 text-sm">2024</span>
@@ -287,11 +252,8 @@
                 <!-- Project 4: Crypto Dashboard -->
                 <div class="project-card glass rounded-xl overflow-hidden" data-category="web ui">
                     <div class="relative group">
-                        <div class="aspect-video bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center">
-                            <div class="text-center">
-                                <i class="fab fa-bitcoin text-4xl text-purple-300 mb-2"></i>
-                                <p class="text-purple-300 text-sm">Crypto Dashboard</p>
-                            </div>
+                        <div class="aspect-video overflow-hidden">
+                            <img src="images/excellence-academy.jpg" alt="CryptoTracker Pro Dashboard" class="w-full h-full object-cover">
                         </div>
                         <div class="project-overlay absolute inset-0 flex items-center justify-center">
                             <div class="text-center">
@@ -308,13 +270,12 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">CryptoTracker Pro</h3>
-                        <p class="text-gray-300 mb-4">Real-time cryptocurrency tracking dashboard with portfolio management and price alerts.</p>
+                        <h3 class="text-xl font-bold mb-2">Excellence Academy</h3>
+                        <p class="text-gray-300 mb-4">Educational platform with course management, student enrollment, and interactive learning features.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">React</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Chart.js</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">API</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Firebase</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">HTML5</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">CSS3</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">JavaScript</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-400 text-sm">2023</span>
@@ -332,11 +293,8 @@
                 <!-- Project 5: Fitness App Landing -->
                 <div class="project-card glass rounded-xl overflow-hidden" data-category="web mobile">
                     <div class="relative group">
-                        <div class="aspect-video bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center">
-                            <div class="text-center">
-                                <i class="fas fa-dumbbell text-4xl text-red-300 mb-2"></i>
-                                <p class="text-red-300 text-sm">Fitness App</p>
-                            </div>
+                        <div class="aspect-video overflow-hidden">
+                            <img src="images/websetly-screenshot.jpg" alt="Fitness App Landing Page" class="w-full h-full object-cover">
                         </div>
                         <div class="project-overlay absolute inset-0 flex items-center justify-center">
                             <div class="text-center">
@@ -353,13 +311,12 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">FitLife Landing</h3>
-                        <p class="text-gray-300 mb-4">High-converting landing page for a fitness app with animated sections and mobile optimization.</p>
+                        <h3 class="text-xl font-bold mb-2">Websetly</h3>
+                        <p class="text-gray-300 mb-4">Professional web design agency website with service showcase, portfolio gallery, and client testimonials.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Next.js</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Framer Motion</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Tailwind</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Vercel</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">HTML5</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">JavaScript</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-400 text-sm">2023</span>
@@ -377,11 +334,8 @@
                 <!-- Project 6: Portfolio Website -->
                 <div class="project-card glass rounded-xl overflow-hidden" data-category="web ui">
                     <div class="relative group">
-                        <div class="aspect-video bg-gradient-to-br from-indigo-600 to-indigo-800 flex items-center justify-center">
-                            <div class="text-center">
-                                <i class="fas fa-briefcase text-4xl text-indigo-300 mb-2"></i>
-                                <p class="text-indigo-300 text-sm">Portfolio Site</p>
-                            </div>
+                        <div class="aspect-video overflow-hidden">
+                            <img src="images/portfolio.jpg" alt="Designer Portfolio Website" class="w-full h-full object-cover">
                         </div>
                         <div class="project-overlay absolute inset-0 flex items-center justify-center">
                             <div class="text-center">
@@ -399,102 +353,12 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Designer Portfolio</h3>
-                        <p class="text-gray-300 mb-4">Clean, minimalist portfolio website for a UI/UX designer with smooth animations and case studies.</p>
+                        <p class="text-gray-300 mb-4">Clean, minimalist portfolio website with smooth animations, project showcases, and contact forms.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Vue.js</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">GSAP</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">CSS Grid</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Netlify</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-400 text-sm">2023</span>
-                            <div class="flex space-x-2">
-                                <i class="fas fa-star text-orange"></i>
-                                <i class="fas fa-star text-orange"></i>
-                                <i class="fas fa-star text-orange"></i>
-                                <i class="fas fa-star text-orange"></i>
-                                <i class="fas fa-star text-gray-600"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 7: E-learning Platform -->
-                <div class="project-card glass rounded-xl overflow-hidden" data-category="web ecommerce">
-                    <div class="relative group">
-                        <div class="aspect-video bg-gradient-to-br from-yellow-600 to-yellow-800 flex items-center justify-center">
-                            <div class="text-center">
-                                <i class="fas fa-graduation-cap text-4xl text-yellow-300 mb-2"></i>
-                                <p class="text-yellow-300 text-sm">E-learning</p>
-                            </div>
-                        </div>
-                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
-                            <div class="text-center">
-                                <div class="flex space-x-4 mb-4">
-                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </button>
-                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
-                                        <i class="fab fa-github"></i>
-                                    </button>
-                                </div>
-                                <p class="text-white font-medium">View Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">LearnHub Academy</h3>
-                        <p class="text-gray-300 mb-4">Comprehensive e-learning platform with video courses, quizzes, and progress tracking system.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">React</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Node.js</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">MongoDB</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">AWS S3</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-400 text-sm">2023</span>
-                            <div class="flex space-x-2">
-                                <i class="fas fa-star text-orange"></i>
-                                <i class="fas fa-star text-orange"></i>
-                                <i class="fas fa-star text-orange"></i>
-                                <i class="fas fa-star text-orange"></i>
-                                <i class="fas fa-star text-orange"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 8: Weather App -->
-                <div class="project-card glass rounded-xl overflow-hidden" data-category="web mobile">
-                    <div class="relative group">
-                        <div class="aspect-video bg-gradient-to-br from-cyan-600 to-cyan-800 flex items-center justify-center">
-                            <div class="text-center">
-                                <i class="fas fa-cloud-sun text-4xl text-cyan-300 mb-2"></i>
-                                <p class="text-cyan-300 text-sm">Weather App</p>
-                            </div>
-                        </div>
-                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
-                            <div class="text-center">
-                                <div class="flex space-x-4 mb-4">
-                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </button>
-                                    <button class="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
-                                        <i class="fab fa-github"></i>
-                                    </button>
-                                </div>
-                                <p class="text-white font-medium">View Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">WeatherWise</h3>
-                        <p class="text-gray-300 mb-4">Beautiful weather application with location-based forecasts, interactive maps, and PWA features.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">JavaScript</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">Weather API</span>
-                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">PWA</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">HTML5</span>
                             <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">CSS3</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-sm">CSS Grid</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-gray-400 text-sm">2023</span>
@@ -553,6 +417,71 @@
         </div>
     </section>
 
+    <!-- Technologies & Skills Section -->
+    <section class="py-20 bg-deep-blue/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Technologies I <span class="text-gradient">Work With</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    The core technologies and tools I use to bring projects to life
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Frontend Technologies -->
+                <div class="glass p-8 rounded-2xl text-center group hover:bg-white/10 transition duration-300">
+                    <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
+                        <i class="fab fa-html5 text-orange text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">HTML5</h3>
+                    <p class="text-gray-300">Semantic markup and modern HTML structures for accessible web applications</p>
+                </div>
+
+                <div class="glass p-8 rounded-2xl text-center group hover:bg-white/10 transition duration-300">
+                    <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
+                        <i class="fab fa-css3-alt text-orange text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">CSS3</h3>
+                    <p class="text-gray-300">Advanced styling, animations, and responsive design with modern CSS features</p>
+                </div>
+
+                <div class="glass p-8 rounded-2xl text-center group hover:bg-white/10 transition duration-300">
+                    <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
+                        <i class="fab fa-js text-orange text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">JavaScript</h3>
+                    <p class="text-gray-300">Interactive functionality and dynamic user experiences with vanilla JavaScript</p>
+                </div>
+
+                <div class="glass p-8 rounded-2xl text-center group hover:bg-white/10 transition duration-300">
+                    <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
+                        <i class="fas fa-wind text-orange text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Tailwind CSS</h3>
+                    <p class="text-gray-300">Utility-first framework for rapid UI development and consistent design systems</p>
+                </div>
+
+                <div class="glass p-8 rounded-2xl text-center group hover:bg-white/10 transition duration-300">
+                    <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
+                        <i class="fas fa-mobile-alt text-orange text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Responsive Design</h3>
+                    <p class="text-gray-300">Mobile-first approach ensuring perfect experiences across all devices</p>
+                </div>
+
+                <div class="glass p-8 rounded-2xl text-center group hover:bg-white/10 transition duration-300">
+                    <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
+                        <i class="fas fa-code text-orange text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Clean Code</h3>
+                    <p class="text-gray-300">Well-structured, maintainable code following industry best practices</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="py-20 bg-gradient-to-r from-orange/10 to-orange/5">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -582,17 +511,11 @@
                     <p class="text-gray-400 text-sm mt-1">Built with passion and attention to detail.</p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-orange transition duration-300">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-orange transition duration-300">
+                    <a href="https://github.com/dev-tunmise" class="text-gray-400 hover:text-orange transition duration-300" target="_blank">
                         <i class="fab fa-github text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-orange transition duration-300">
+                    <a href="https://x.com/devtunmise" class="text-gray-400 hover:text-orange transition duration-300" target="_blank">
                         <i class="fab fa-twitter text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-orange transition duration-300">
-                        <i class="fab fa-instagram text-xl"></i>
                     </a>
                 </div>
             </div>
