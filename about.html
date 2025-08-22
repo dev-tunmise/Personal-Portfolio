@@ -3,53 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abou                    <h3 class="text-2xl font-bold text-orange mb-4">Freelance Web Developer & Designer</h3>
-                    <p class="text-gray-300 leading-relaxed mb-6">
-                        As a dedicated freelance web developer, I specialize in helping small businesses, startups, and entrepreneurs establish their online presence. My mission is simple: create professional, high-converting websites that drive real business results.
-                    </p>
-                    <p class="text-gray-300 leading-relaxed">
-                        I don't just build websites – I craft digital experiences that tell your story, engage your audience, and grow your business. Every project is an opportunity to combine cutting-edge technology with strategic thinking.uwatunmise Awomoyi</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'deep-blue': '#0A192F',
-                        'orange': '#FF6B35',
-                        'light-gray': '#F5F5F5'
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+    <title>About - Oluwatunmise Awomoyi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .text-gradient {
-            background: linear-gradient(135deg, #FF6B35, #ff8c5a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .glass {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .animate-fade-in {
-            animation: fadeIn 0.8s ease-out forwards;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.min.css">
 </head>
 <body class="bg-deep-blue text-white font-sans">
     <!-- Navigation -->
@@ -57,7 +17,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="text-xl font-bold text-gradient">
-                    <a href="index.html">Tunmise</a>
+                    Tunmise
                 </div>
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="text-white hover:text-orange transition duration-300">Home</a>
@@ -83,201 +43,154 @@
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <section class="pt-32 pb-16 bg-gradient-to-br from-deep-blue to-deep-blue/80">
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-deep-blue to-deep-blue/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center animate-fade-in">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
                     About <span class="text-gradient">Me</span>
                 </h1>
-                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-                    Passionate about creating digital experiences that make a difference
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    Get to know the person behind the code – my journey, passion, and what drives me to create exceptional digital experiences.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
+    <!-- About Content -->
     <section class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <!-- Profile Image -->
-                <div class="relative">
-                    <div class="aspect-square bg-gradient-to-br from-orange/20 to-orange/5 rounded-2xl p-8 glass">
-                        <div class="w-full h-full rounded-xl overflow-hidden">
-                            <img src="images/man-1.jpg" alt="Oluwatunmise Awomoyi - Web Developer" class="w-full h-full object-cover">
-                        </div>
+                <div class="order-2 lg:order-1">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-orange/20 to-orange/10 rounded-2xl blur-2xl"></div>
+                        <img src="Images/man-1.jpg" alt="Oluwatunmise Awomoyi" class="relative rounded-2xl shadow-2xl w-full max-w-md mx-auto">
                     </div>
-                    <!-- Decorative Elements -->
-                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-orange/10 rounded-full blur-xl"></div>
-                    <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-orange/5 rounded-full blur-2xl"></div>
                 </div>
-
-                <!-- About Content -->
-                <div class="space-y-6">
-                    <div>
-                        <h2 class="text-3xl font-bold mb-4 text-gradient">My Story</h2>
-                        <p class="text-gray-300 text-lg leading-relaxed mb-6">
-                            Hi there! I'm a passionate web developer and designer with a love for creating digital experiences that not only look amazing but also solve real-world problems. My journey into tech started several years ago when I discovered the power of code to transform ideas into reality.
+                
+                <!-- About Text -->
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8">
+                        Hi, I'm <span class="text-gradient">Oluwatunmise</span>
+                    </h2>
+                    <div class="space-y-6 text-gray-300 leading-relaxed">
+                        <p>
+                            I'm a passionate web developer and designer based in Nigeria, with a love for creating digital experiences that make a difference. My journey into web development started with curiosity and has evolved into a profession I'm truly passionate about.
                         </p>
-                        <p class="text-gray-300 text-lg leading-relaxed mb-6">
-                            What drives me is the perfect blend of creativity and logic that web development offers. Every project is a new puzzle to solve, a new opportunity to push boundaries and create something unique.
+                        <p>
+                            With expertise in HTML5, CSS3, JavaScript, and modern frameworks like Tailwind CSS, I specialize in building responsive, user-friendly websites that not only look great but also perform exceptionally well.
                         </p>
-                        <p class="text-gray-300 text-lg leading-relaxed">
-                            When I'm not coding, you'll find me exploring the latest design trends, contributing to open-source projects, or sharing knowledge with the developer community through blog posts and mentoring.
+                        <p>
+                            When I'm not coding, you'll find me exploring new technologies, learning about design trends, or working on personal projects that challenge me to grow as a developer.
                         </p>
                     </div>
-
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="glass p-6 rounded-xl">
-                            <div class="text-orange text-2xl font-bold mb-2">5+</div>
-                            <div class="text-gray-300">Years Experience</div>
-                        </div>
-                        <div class="glass p-6 rounded-xl">
-                            <div class="text-orange text-2xl font-bold mb-2">50+</div>
-                            <div class="text-gray-300">Projects Completed</div>
-                        </div>
-                        <div class="glass p-6 rounded-xl">
-                            <div class="text-orange text-2xl font-bold mb-2">30+</div>
-                            <div class="text-gray-300">Happy Clients</div>
-                        </div>
-                        <div class="glass p-6 rounded-xl">
-                            <div class="text-orange text-2xl font-bold mb-2">24/7</div>
-                            <div class="text-gray-300">Dedication</div>
-                        </div>
+                    
+                    <div class="mt-8">
+                        <a href="contact.html" class="bg-orange hover:bg-orange/80 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 transform hover:scale-105 shadow-lg inline-flex items-center">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Let's Work Together
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Professional Background -->
-    <section class="py-20 bg-deep-blue/30">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                    Professional <span class="text-gradient">Background</span>
-                </h2>
-                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-                    Building businesses and helping others succeed online
-                </p>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-2xl font-bold text-orange mb-4">Founder & Lead Developer at Websetly</h3>
-                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
-                        As the founder of Websetly, I've built a thriving web design agency that specializes in helping small businesses, startups, and entrepreneurs establish their online presence. Our mission is simple: create professional, high-converting websites that drive real business results.
-                    </p>
-                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
-                        At Websetly, we don't just build websites – we craft digital experiences that tell your story, engage your audience, and grow your business. Every project is an opportunity to combine cutting-edge technology with strategic thinking.
-                    </p>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-start space-x-3">
-                            <div class="bg-orange/20 p-2 rounded-full flex-shrink-0 mt-1">
-                                <i class="fas fa-check text-orange text-sm"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-white mb-1">Custom Web Solutions</h4>
-                                <p class="text-gray-300">Tailored websites that reflect your brand and achieve your goals</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <div class="bg-orange/20 p-2 rounded-full flex-shrink-0 mt-1">
-                                <i class="fas fa-check text-orange text-sm"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-white mb-1">Performance Optimization</h4>
-                                <p class="text-gray-300">Fast, SEO-friendly websites that rank well and convert visitors</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <div class="bg-orange/20 p-2 rounded-full flex-shrink-0 mt-1">
-                                <i class="fas fa-check text-orange text-sm"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-white mb-1">Ongoing Support</h4>
-                                <p class="text-gray-300">Long-term partnerships with maintenance and growth strategies</p>
-                            </div>
-                        </div>
+    <!-- Freelance Section -->
+    <section class="py-20 bg-deep-blue/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass p-12 rounded-2xl text-center">
+                <div class="mb-8">
+                    <div class="bg-orange/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-laptop-code text-orange text-3xl"></i>
                     </div>
+                    <h3 class="text-2xl font-bold text-orange mb-4">Freelance Web Developer & Designer</h3>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        As a dedicated freelance web developer, I specialize in helping small businesses, startups, and entrepreneurs establish their online presence. My mission is simple: create professional, high-converting websites that drive real business results.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        I don't just build websites – I craft digital experiences that tell your story, engage your audience, and grow your business. Every project is an opportunity to combine cutting-edge technology with strategic thinking.
+                    </p>
                 </div>
-
-                <div class="glass p-8 rounded-2xl">
-                    <div class="text-center mb-6">
-                        <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-laptop-code text-orange text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">Freelance Practice</h3>
-                        <p class="text-orange font-semibold">Web Design Agency</p>
+                
+                <div class="grid md:grid-cols-3 gap-6 mt-12">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange mb-2">50+</div>
+                        <div class="text-gray-400">Projects Completed</div>
                     </div>
-                    
-                    <div class="space-y-4 text-center">
-                        <div class="border-b border-gray-700 pb-4">
-                            <p class="text-gray-300 mb-2">Specializing in:</p>
-                            <div class="flex flex-wrap justify-center gap-2">
-                                <span class="bg-orange/10 text-orange px-3 py-1 rounded-full text-sm">Small Business</span>
-                                <span class="bg-orange/10 text-orange px-3 py-1 rounded-full text-sm">Startups</span>
-                                <span class="bg-orange/10 text-orange px-3 py-1 rounded-full text-sm">Entrepreneurs</span>
-                            </div>
-                        </div>
-                        
-                        <div class="grid grid-cols-3 gap-4 text-center">
-                            <div>
-                                <div class="text-orange font-bold text-lg">15+</div>
-                                <div class="text-gray-400 text-sm">Clients Served</div>
-                            </div>
-                            <div>
-                                <div class="text-orange font-bold text-lg">98%</div>
-                                <div class="text-gray-400 text-sm">Satisfaction</div>
-                            </div>
-                            <div>
-                                <div class="text-orange font-bold text-lg">2+</div>
-                                <div class="text-gray-400 text-sm">Years Running</div>
-                            </div>
-                        </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange mb-2">3+</div>
+                        <div class="text-gray-400">Years Experience</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange mb-2">100%</div>
+                        <div class="text-gray-400">Client Satisfaction</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Values Section -->
+    <!-- Skills Highlights -->
     <section class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                    My <span class="text-gradient">Values</span>
+                    What I <span class="text-gradient">Bring</span>
                 </h2>
                 <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-                    The principles that guide every project and relationship
+                    A combination of technical skills, creative vision, and business understanding
                 </p>
             </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-xl text-center group hover:bg-white/10 transition duration-300">
-                    <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
-                        <i class="fas fa-heart text-orange text-2xl"></i>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-xl text-center hover:bg-white/10 transition duration-300">
+                    <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-code text-orange text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Quality First</h3>
-                    <p class="text-gray-300">Every line of code, every pixel, every interaction is crafted with attention to detail and a commitment to excellence.</p>
+                    <h3 class="text-xl font-semibold mb-4">Clean Code</h3>
+                    <p class="text-gray-300">Well-structured, maintainable code that follows best practices and industry standards.</p>
                 </div>
-
-                <div class="glass p-8 rounded-xl text-center group hover:bg-white/10 transition duration-300">
-                    <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
-                        <i class="fas fa-users text-orange text-2xl"></i>
+                
+                <div class="glass p-8 rounded-xl text-center hover:bg-white/10 transition duration-300">
+                    <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-mobile-alt text-orange text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Client Partnership</h3>
-                    <p class="text-gray-300">I believe in building lasting relationships, understanding your vision, and working together to achieve your goals.</p>
+                    <h3 class="text-xl font-semibold mb-4">Responsive Design</h3>
+                    <p class="text-gray-300">Websites that look and work perfectly on all devices, from mobile to desktop.</p>
                 </div>
-
-                <div class="glass p-8 rounded-xl text-center group hover:bg-white/10 transition duration-300">
-                    <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
-                        <i class="fas fa-lightbulb text-orange text-2xl"></i>
+                
+                <div class="glass p-8 rounded-xl text-center hover:bg-white/10 transition duration-300">
+                    <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tachometer-alt text-orange text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Innovation</h3>
-                    <p class="text-gray-300">Staying ahead of trends and technologies to deliver modern, future-proof solutions that give you a competitive edge.</p>
+                    <h3 class="text-xl font-semibold mb-4">Performance</h3>
+                    <p class="text-gray-300">Fast-loading websites optimized for speed, SEO, and user experience.</p>
+                </div>
+                
+                <div class="glass p-8 rounded-xl text-center hover:bg-white/10 transition duration-300">
+                    <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-paint-brush text-orange text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Modern Design</h3>
+                    <p class="text-gray-300">Contemporary designs that capture attention and create lasting impressions.</p>
+                </div>
+                
+                <div class="glass p-8 rounded-xl text-center hover:bg-white/10 transition duration-300">
+                    <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-comments text-orange text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Communication</h3>
+                    <p class="text-gray-300">Clear, regular updates throughout the project to keep you informed every step.</p>
+                </div>
+                
+                <div class="glass p-8 rounded-xl text-center hover:bg-white/10 transition duration-300">
+                    <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-handshake text-orange text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Partnership</h3>
+                    <p class="text-gray-300">I work as your partner, not just a service provider, to achieve your goals.</p>
                 </div>
             </div>
         </div>
@@ -286,17 +199,19 @@
     <!-- CTA Section -->
     <section class="py-20 bg-gradient-to-r from-orange/10 to-orange/5">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                Ready to Work <span class="text-gradient">Together?</span>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Start Your <span class="text-gradient">Project?</span>
             </h2>
             <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Let's discuss your project and see how we can bring your vision to life with a website that truly represents your brand.
+                Let's discuss your ideas and create something amazing together. I'm always excited to take on new challenges and help bring your vision to life.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.html" class="bg-orange hover:bg-orange/80 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 transform hover:scale-105">
+                <a href="contact.html" class="bg-orange hover:bg-orange/80 text-white px-8 py-4 rounded-lg font-semibold transition duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center">
+                    <i class="fas fa-paper-plane mr-2"></i>
                     Get In Touch
                 </a>
-                <a href="portfolio.html" class="glass text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition duration-300">
+                <a href="portfolio.html" class="glass text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition duration-300 inline-flex items-center justify-center">
+                    <i class="fas fa-eye mr-2"></i>
                     View My Work
                 </a>
             </div>
@@ -324,33 +239,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections for animations
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+    <script src="script.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,20 @@
+{
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "_comment": "Force redeploy 2025-08-22",
+  "rewrites": [
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/portfolio", 
+      "destination": "/portfolio.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    }
+  ]
+}
