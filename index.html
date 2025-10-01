@@ -7,9 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="style.min.css?v=3">
 </head>
 <body class="bg-deep-blue text-white font-sans">
     <!-- Navigation -->
@@ -27,7 +25,9 @@
                 </div>
                 <div class="md:hidden">
                     <button id="mobile-menu-btn" class="text-white hover:text-orange">
-                        <i class="fas fa-bars text-xl"></i>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/>
+                        </svg>
                     </button>
                 </div>
             </div>
@@ -84,23 +84,18 @@
                     Web Developer & Designer · Founder of Websetly
                 </p>
                 <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-                    Crafting exceptional digital experiences that blend creativity with cutting-edge technology. 
-                    I transform ideas into stunning, functional websites that drive results.
+                    I build fast, modern, SEO-optimized websites that increase your online visibility and help more people discover your business.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a href="portfolio.html" class="bg-orange hover:bg-orange/80 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 transform hover:scale-105 shadow-lg">
                         View My Work
                     </a>
                     <a href="contact.html" class="glass text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition duration-300">
-                        Let's Connect
+                        Contact Me
                     </a>
                 </div>
             </div>
 
-            <!-- Scroll Indicator -->
-            <div class=" hidden absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-                <i class="fas fa-chevron-down text-orange text-xl"></i>
-            </div>
         </div>
     </section>
 
@@ -110,21 +105,29 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center group">
                     <div class="bg-orange/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange/20 transition duration-300">
-                        <i class="fas fa-code text-orange text-2xl"></i>
+                        <svg class="w-8 h-8 text-orange" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                        </svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Website Development</h3>
                     <p class="text-gray-300">Custom websites built with clean HTML, modern CSS, and interactive JavaScript.</p>
                 </div>
                 <div class="text-center group">
                     <div class="bg-orange/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange/20 transition duration-300">
-                        <i class="fas fa-paint-brush text-orange text-2xl"></i>
+                        <svg class="w-8 h-8 text-orange" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.71 4.63l-1.34-1.34c-.39-.39-1.02-.39-1.41 0L9 12.25 11.75 15l8.96-8.96c.39-.39.39-1.02 0-1.41z"/>
+                            <path d="M7 14c-1.66 0-3 1.34-3 3 0 1.31-1.16 2-2 2 .92 1.22 2.49 2 4 2 2.21 0 4-1.79 4-4l-3-3z"/>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Web Design</h3>
                     <p class="text-gray-300">Beautiful, responsive designs that work perfectly on all devices and browsers.</p>
                 </div>
                 <div class="text-center group">
                     <div class="bg-orange/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange/20 transition duration-300">
-                        <i class="fas fa-rocket text-orange text-2xl"></i>
+                        <svg class="w-8 h-8 text-orange" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+</svg>
+
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Business Websites</h3>
                     <p class="text-gray-300">Professional websites that help businesses establish their online presence and grow.</p>
@@ -149,7 +152,9 @@
                 <!-- HTML -->
                 <div class="glass p-8 rounded-xl text-center group hover:bg-white/10 transition duration-300">
                     <div class="bg-orange/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
-                        <i class="fab fa-html5 text-orange text-3xl"></i>
+                        <svg class="w-12 h-12 text-orange" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/>
+                        </svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">HTML5</h3>
                     <p class="text-gray-300 mb-6">Semantic markup, accessibility standards, and modern HTML practices for clean, structured websites.</p>
@@ -162,7 +167,9 @@
                 <!-- CSS & Tailwind -->
                 <div class="glass p-8 rounded-xl text-center group hover:bg-white/10 transition duration-300">
                     <div class="bg-orange/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
-                        <i class="fab fa-css3-alt text-orange text-3xl"></i>
+                        <svg class="w-12 h-12 text-orange" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/>
+                        </svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">CSS & Tailwind</h3>
                     <p class="text-gray-300 mb-6">Advanced styling with CSS3, Flexbox, Grid, animations, and utility-first Tailwind CSS framework.</p>
@@ -175,7 +182,9 @@
                 <!-- JavaScript -->
                 <div class="glass p-8 rounded-xl text-center group hover:bg-white/10 transition duration-300">
                     <div class="bg-orange/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
-                        <i class="fab fa-js-square text-orange text-3xl"></i>
+                        <svg class="w-12 h-12 text-orange" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/>
+                        </svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">JavaScript</h3>
                     <p class="text-gray-300 mb-6">Modern JavaScript ES6+, DOM manipulation, event handling, and interactive web functionality.</p>
@@ -203,7 +212,9 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
                 <div class="text-center glass p-6 rounded-xl">
                     <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-clock text-orange text-2xl"></i>
+                        <svg class="w-8 h-8 text-orange" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
+                        </svg>
                     </div>
                     <h3 class="text-lg font-semibold mb-2">Fast Delivery</h3>
                     <p class="text-gray-300 text-sm">Quality websites delivered on time, every time</p>
@@ -211,7 +222,9 @@
 
                 <div class="text-center glass p-6 rounded-xl">
                     <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-mobile-alt text-orange text-2xl"></i>
+                        <svg class="w-8 h-8 text-orange" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17 2H7c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM7 4h10v12H7V4zm5 15c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                        </svg>
                     </div>
                     <h3 class="text-lg font-semibold mb-2">Mobile-First</h3>
                     <p class="text-gray-300 text-sm">Perfect on every device and screen size</p>
@@ -219,7 +232,9 @@
 
                 <div class="text-center glass p-6 rounded-xl">
                     <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-search text-orange text-2xl"></i>
+                        <svg class="w-8 h-8 text-orange" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        </svg>
                     </div>
                     <h3 class="text-lg font-semibold mb-2">SEO Optimized</h3>
                     <p class="text-gray-300 text-sm">Built to rank well on Google searches</p>
@@ -227,7 +242,9 @@
 
                 <div class="text-center glass p-6 rounded-xl">
                     <div class="bg-orange/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-headset text-orange text-2xl"></i>
+                        <svg class="w-8 h-8 text-orange" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/>
+                        </svg>
                     </div>
                     <h3 class="text-lg font-semibold mb-2">Ongoing Support</h3>
                     <p class="text-gray-300 text-sm">I'm here even after your website goes live</p>
@@ -244,12 +261,16 @@
                         From concept to launch, I'll be with you every step of the way.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="contact.html" class="bg-orange hover:bg-orange/80 text-white px-8 py-4 rounded-lg font-semibold transition duration-300 transform hover:scale-105 shadow-lg">
-                            <i class="fas fa-rocket mr-2"></i>
+                        <a href="contact.html" class="bg-orange hover:bg-orange/80 text-white px-8 py-4 rounded-lg font-semibold transition duration-300 transform hover:scale-105 shadow-lg inline-flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L13.09 8.26L18 7L15.5 12.5L22 12L15.5 15.5L18 21L13.09 19.74L12 26L10.91 19.74L6 21L8.5 15.5L2 16L8.5 12.5L6 7L10.91 8.26L12 2Z"/>
+                            </svg>
                             Start Your Project Today
                         </a>
-                        <a href="portfolio.html" class="glass text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition duration-300">
-                            <i class="fas fa-eye mr-2"></i>
+                        <a href="portfolio.html" class="glass text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition duration-300 inline-flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                            </svg>
                             View My Work
                         </a>
                     </div>
@@ -268,10 +289,14 @@
                 </div>
                 <div class="flex space-x-6">
                     <a href="https://github.com/dev-tunmise" class="text-gray-400 hover:text-orange transition duration-300" target="_blank">
-                        <i class="fab fa-github text-xl"></i>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
                     </a>
                     <a href="https://x.com/devtunmise" class="text-gray-400 hover:text-orange transition duration-300" target="_blank">
-                        <i class="fab fa-twitter text-xl"></i>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
                     </a>
                 </div>
             </div>
