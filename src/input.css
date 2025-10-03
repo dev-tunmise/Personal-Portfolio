@@ -122,12 +122,46 @@
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
+    color: white;
 }
 
 .form-input:focus {
     border-color: #FF6B35;
     box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.1);
     outline: none;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Select dropdown styling */
+.form-input select {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+}
+
+.form-input select:focus {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.form-input select option {
+    background: #0A192F;
+    color: white;
+    padding: 8px;
+}
+
+.form-input select option:hover,
+.form-input select option:focus {
+    background: #FF6B35;
+    color: white;
 }
 
 /* Additional floating animations for hero section */
