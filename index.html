@@ -87,10 +87,10 @@
                     I build fast, modern, SEO-optimized websites that increase your online visibility and help more people discover your business.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="portfolio.html" class="bg-orange hover:bg-orange/80 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 transform hover:scale-105 shadow-lg">
+                    <a href="portfolio.html" class="bg-orange hover:bg-orange/80 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center">
                         View My Work
                     </a>
-                    <a href="contact.html" class="glass text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition duration-300">
+                    <a href="contact.html" class="glass text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition duration-300 inline-flex items-center justify-center">
                         Contact Me
                     </a>
                 </div>
@@ -148,65 +148,132 @@
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- HTML -->
-                <div class="glass p-8 rounded-xl text-center group hover:bg-white/10 transition duration-300">
-                    <div class="bg-orange/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
-                        <svg class="w-12 h-12 text-orange" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/>
-                        </svg>
+            <div class="space-y-12">
+                <!-- First 3 skills in a row -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- HTML -->
+                    <div class="glass p-8 rounded-xl text-center group hover:bg-white/10 transition duration-300">
+                        <div class="bg-orange/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
+                            <svg class="w-12 h-12 text-orange" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">HTML5</h3>
+                        <p class="text-gray-300 mb-6">Semantic markup, accessibility standards, and modern HTML practices for clean, structured websites.</p>
+                        <div class="bg-gray-700 rounded-full h-2 mb-3">
+                            <div class="bg-gradient-to-r from-orange to-orange/80 rounded-full h-2" style="width: 95%"></div>
+                        </div>
+                        <span class="text-orange font-bold">Expert Level</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">HTML5</h3>
-                    <p class="text-gray-300 mb-6">Semantic markup, accessibility standards, and modern HTML practices for clean, structured websites.</p>
-                    <div class="bg-gray-700 rounded-full h-2 mb-3">
-                        <div class="bg-gradient-to-r from-orange to-orange/80 rounded-full h-2" style="width: 95%"></div>
+
+                    <!-- CSS & Tailwind -->
+                    <div class="glass p-8 rounded-xl text-center group hover:bg-white/10 transition duration-300">
+                        <div class="bg-orange/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
+                            <svg class="w-12 h-12 text-orange" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">CSS & Tailwind</h3>
+                        <p class="text-gray-300 mb-6">Advanced styling with CSS3, Flexbox, Grid, animations, and utility-first Tailwind CSS framework.</p>
+                        <div class="bg-gray-700 rounded-full h-2 mb-3">
+                            <div class="bg-gradient-to-r from-orange to-orange/80 rounded-full h-2" style="width: 90%"></div>
+                        </div>
+                        <span class="text-orange font-bold">Expert Level</span>
                     </div>
-                    <span class="text-orange font-bold">Expert Level</span>
+
+                    <!-- JavaScript -->
+                    <div class="glass p-8 rounded-xl text-center group hover:bg-white/10 transition duration-300">
+                        <div class="bg-orange/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
+                            <svg class="w-12 h-12 text-orange" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">JavaScript</h3>
+                        <p class="text-gray-300 mb-6">Modern JavaScript ES6+, DOM manipulation, event handling, and interactive web functionality.</p>
+                        <div class="bg-gray-700 rounded-full h-2 mb-3">
+                            <div class="bg-gradient-to-r from-orange to-orange/80 rounded-full h-2" style="width: 85%"></div>
+                        </div>
+                        <span class="text-orange font-bold">Advanced Level</span>
+                    </div>
                 </div>
 
-                <!-- CSS & Tailwind -->
-                <div class="glass p-8 rounded-xl text-center group hover:bg-white/10 transition duration-300">
-                    <div class="bg-orange/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
-                        <svg class="w-12 h-12 text-orange" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/>
-                        </svg>
+                <!-- WordPress - Unique Design -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="glass rounded-2xl overflow-hidden relative group">
+                        <!-- Background gradient -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-orange/10 via-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                        
+                        <div class="grid lg:grid-cols-3 gap-0">
+                            <!-- Left side - Icon and Visual -->
+                            <div class="bg-gradient-to-br from-orange/20 to-orange/10 p-8 flex flex-col items-center justify-center text-center lg:text-left relative">
+                                <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0iIzMwMzAzMCIgZmlsbC1vcGFjaXR5PSIwLjEiLz4KPC9zdmc+')] opacity-30"></div>
+                                
+                                <div class="relative z-10">
+                                    <div class="bg-white/10 w-24 h-24 rounded-full flex items-center justify-center mx-auto lg:mx-0 mb-6 group-hover:scale-110 group-hover:bg-white/20 transition duration-500">
+                                        <svg class="w-16 h-16 fill-current text-orange" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"/>
+                                        </svg>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div class="w-16 h-1 bg-orange/40 rounded-full mx-auto lg:mx-0"></div>
+                                        <div class="w-12 h-1 bg-orange/60 rounded-full mx-auto lg:mx-0"></div>
+                                        <div class="w-20 h-1 bg-orange/30 rounded-full mx-auto lg:mx-0"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Right side - Content -->
+                            <div class="lg:col-span-2 p-8 relative z-10">
+                                <div class="flex flex-col h-full justify-between">
+                                    <div>
+                                        <div class="flex items-center justify-between mb-4">
+                                            <h3 class="text-3xl font-bold text-gradient">WordPress</h3>
+                                            <div class="hidden lg:flex space-x-2">
+                                                <div class="w-3 h-3 bg-orange rounded-full animate-pulse"></div>
+                                                <div class="w-3 h-3 bg-orange/60 rounded-full animate-pulse" style="animation-delay: 0.2s"></div>
+                                                <div class="w-3 h-3 bg-orange/30 rounded-full animate-pulse" style="animation-delay: 0.4s"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <p class="text-gray-300 mb-6 leading-relaxed">
+                                            Building dynamic, scalable websites with custom theme development, plugin integration, and comprehensive content management solutions. From simple blogs to complex e-commerce platforms.
+                                        </p>
+                                        
+                                        <!-- Skills breakdown -->
+                                        <div class="grid grid-cols-2 gap-4 mb-6">
+                                            <div class="space-y-2">
+                                                <div class="flex justify-between text-sm">
+                                                    <span class="text-gray-400">Custom Themes</span>
+                                                    <span class="text-orange">90%</span>
+                                                </div>
+                                                <div class="bg-gray-700 rounded-full h-1.5">
+                                                    <div class="bg-gradient-to-r from-orange to-orange/80 rounded-full h-1.5" style="width: 90%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="space-y-2">
+                                                <div class="flex justify-between text-sm">
+                                                    <span class="text-gray-400">Plugin Dev</span>
+                                                    <span class="text-orange">75%</span>
+                                                </div>
+                                                <div class="bg-gray-700 rounded-full h-1.5">
+                                                    <div class="bg-gradient-to-r from-orange to-orange/80 rounded-full h-1.5" style="width: 75%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-orange font-bold text-lg">Advanced Level</span>
+                                        <div class="flex space-x-3">
+                                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-xs">PHP</span>
+                                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-xs">MySQL</span>
+                                            <span class="bg-orange/20 text-orange px-3 py-1 rounded-full text-xs">WooCommerce</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">CSS & Tailwind</h3>
-                    <p class="text-gray-300 mb-6">Advanced styling with CSS3, Flexbox, Grid, animations, and utility-first Tailwind CSS framework.</p>
-                    <div class="bg-gray-700 rounded-full h-2 mb-3">
-                        <div class="bg-gradient-to-r from-orange to-orange/80 rounded-full h-2" style="width: 90%"></div>
-                    </div>
-                    <span class="text-orange font-bold">Expert Level</span>
-                </div>
-
-                <!-- JavaScript -->
-                <div class="glass p-8 rounded-xl text-center group hover:bg-white/10 transition duration-300">
-                    <div class="bg-orange/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
-                        <svg class="w-12 h-12 text-orange" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">JavaScript</h3>
-                    <p class="text-gray-300 mb-6">Modern JavaScript ES6+, DOM manipulation, event handling, and interactive web functionality.</p>
-                    <div class="bg-gray-700 rounded-full h-2 mb-3">
-                        <div class="bg-gradient-to-r from-orange to-orange/80 rounded-full h-2" style="width: 85%"></div>
-                    </div>
-                    <span class="text-orange font-bold">Advanced Level</span>
-                </div>
-
-                <!-- WordPress -->
-                <div class="glass p-8 rounded-xl text-center group hover:bg-white/10 transition duration-300">
-                    <div class="bg-orange/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-orange/30 transition duration-300">
-                        <svg class="w-12 h-12 text-orange" fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.135-2.85-.135-.584-.03-.661.854-.075.899 0 0 .54.075 1.116.105l1.659 4.537-2.313 6.942L4.77 11.94c.64-.03 1.231-.105 1.231-.105.582-.075.515-.93-.068-.899 0 0-1.755.135-2.88.135-.202 0-.44-.008-.69-.015C4.216 5.831 7.892 2.5 12.372 2.5c3.564 0 6.8 1.365 9.22 3.6-.06-.004-.116-.014-.176-.014-1.065 0-1.81.93-1.81 1.94 0 .9.525 1.665 1.065 2.565.405.75.885 1.725.885 3.12 0 .965-.345 2.092-.795 3.652l-1.044 3.49-3.789-11.27c.647-.03 1.231-.105 1.231-.105.584-.075.516-.93-.067-.899 0 0-1.756.135-2.88.135m-8.678 0c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.135-2.85-.135-.584-.03-.661.854-.075.899 0 0 .54.075 1.116.105l1.659 4.537-2.313 6.942L4.77 11.94c.64-.03 1.231-.105 1.231-.105.582-.075.515-.93-.068-.899 0 0-1.755.135-2.88.135-.202 0-.44-.008-.69-.015C4.216 5.831 7.892 2.5 12.372 2.5c3.564 0 6.8 1.365 9.22 3.6-.06-.004-.116-.014-.176-.014-1.065 0-1.81.93-1.81 1.94 0 .9.525 1.665 1.065 2.565.405.75.885 1.725.885 3.12 0 .965-.345 2.092-.795 3.652l-1.044 3.49-3.789-11.27zm-.893 8.795l2.487 6.84c.015.045.045.075.075.12-1.335.465-2.76.72-4.245.72-1.29 0-2.52-.195-3.675-.54l3.358-7.14m7.705-2.715c0-1.005-.375-1.68-.705-2.25-.435-.705-.84-1.305-.84-2.01 0-.795.6-1.53 1.455-1.53.039 0 .075.015.114.015C18.585 4.35 15.645 2.5 12.205 2.5 8.055 2.5 4.47 5.07 2.715 8.775c.195-.015.375-.015.54-.015 1.065 0 2.7-.135 2.7-.135.544-.03.61.765.075.825 0 0-.555.06-1.17.09L8.64 18.405l2.295-6.885-1.635-4.455c-.54-.03-1.05-.09-1.05-.09-.544-.03-.479-.855.066-.825 0 0 1.665.135 2.655.135.975 0 2.85-.135 2.85-.135.544-.03.61.795.075.825 0 0-.555.06-1.17.09l3.789 11.265 1.05-3.51c.45-1.455.795-2.505.795-3.405"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">WordPress</h3>
-                    <p class="text-gray-300 mb-6">Custom theme development, plugin integration, content management, and e-commerce solutions.</p>
-                    <div class="bg-gray-700 rounded-full h-2 mb-3">
-                        <div class="bg-gradient-to-r from-orange to-orange/80 rounded-full h-2" style="width: 80%"></div>
-                    </div>
-                    <span class="text-orange font-bold">Advanced Level</span>
                 </div>
             </div>
         </div>
@@ -319,5 +386,6 @@
     </footer>
 
     <!-- JavaScript -->
+    <script src="script.min.js"></script>
 </body>
 </html>
