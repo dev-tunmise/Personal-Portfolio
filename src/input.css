@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .whatsapp-float {
+        @apply fixed bottom-6 right-6 bg-[#25D366] w-[60px] h-[60px] rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:bg-[#128C7E] hover:-translate-y-1 hover:shadow-xl z-50;
+    }
+    
+    .whatsapp-float svg {
+        @apply w-9 h-9 text-white;
+    }
+}
+
 /* Custom Styles */
 .text-gradient {
     background: linear-gradient(135deg, #FF6B35, #ff8c5a);
@@ -18,6 +28,71 @@
 
 .hero-gradient {
     background: linear-gradient(135deg, #0A192F 0%, #1a2332 100%);
+}
+
+/* WhatsApp button */
+.whatsapp-float {
+    position: fixed !important;
+    bottom: 25px !important;
+    right: 25px !important;
+    background-color: #25D366 !important;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    text-align: center !important;
+    font-size: 30px !important;
+    box-shadow: 2px 2px 3px #999 !important;
+    z-index: 100 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E !important;
+    transform: translateY(-5px) !important;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+.whatsapp-float svg {
+    width: 35px !important;
+    height: 35px !important;
+    fill: white !important;
+}
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+    background-color: #25D366;
+}
+
+.whatsapp-float svg {
+    width: 40px;
+    height: 40px;
+    fill: currentColor;
+}
 }
 
 .project-card {
